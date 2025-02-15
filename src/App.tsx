@@ -6,12 +6,10 @@ import { Person } from './types/Person';
 import classNames from 'classnames';
 
 type Props = {
-  delay: number;
-  onSelected: (person: Person) => void;
-  selectedPersonName?: string;
+  delay: 300;
 };
 
-export const App: React.FC<Props> = ({ delay = 300 }) => {
+export const App: React.FC<Props> = ({ delay }) => {
   const [selectedPerson, setSelectedPerson] = useState<Person | null>(null);
 
   const [currentPersons] = useState(peopleFromServer);
